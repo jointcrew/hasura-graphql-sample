@@ -1,0 +1,103 @@
+{
+  "version": 2,
+  "tables": [
+    {
+      "table": {
+        "schema": "public",
+        "name": "company"
+      },
+      "array_relationships": [
+        {
+          "name": "lines",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "company_cd",
+              "table": {
+                "schema": "public",
+                "name": "line"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "line"
+      },
+      "object_relationships": [
+        {
+          "name": "company",
+          "using": {
+            "foreign_key_constraint_on": "company_cd"
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "stations",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "line_cd",
+              "table": {
+                "schema": "public",
+                "name": "station"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "station"
+      },
+      "object_relationships": [
+        {
+          "name": "line",
+          "using": {
+            "foreign_key_constraint_on": "line_cd"
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "station_join"
+      },
+      "object_relationships": [
+        {
+          "name": "after_station",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "station"
+              },
+              "column_mapping": {
+                "station_cd2": "station_cd"
+              }
+            }
+          }
+        },
+        {
+          "name": "before_station",
+          "using": {
+            "manual_configuration": {
+              "remote_table": {
+                "schema": "public",
+                "name": "station"
+              },
+              "column_mapping": {
+                "station_cd1": "station_cd"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
