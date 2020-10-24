@@ -7,10 +7,15 @@
 2. Hasuraコンソールにアクセス `http://localhost:8080`
 3. Hasuraコンソール上でデータの読み込み(テーブルデータが読み込まれてない場合は実行してください)
 - テーブルの読み込み
+![スクリーンショット 2020-10-24 20 46 11](https://user-images.githubusercontent.com/29055497/97081062-e6248780-163a-11eb-86c5-8e19b62d007d.png)
 
 - リレーションの読み込み
+![スクリーンショット 2020-10-24 20 46 25](https://user-images.githubusercontent.com/29055497/97081064-e9b80e80-163a-11eb-80b8-dfdd7eac8b03.png)
+
 4. Hasuraコンソール上でmetadataの読み込み(メタデータが読み込まれてない場合は実行してください)
 - メタデータのインポート
+![スクリーンショット 2020-10-24 20 59 25](https://user-images.githubusercontent.com/29055497/97081219-d3f71900-163b-11eb-977e-840e6f5f607f.png)
+
 
 ## その他コマンド
 ```
