@@ -1,3 +1,5 @@
+.PHONY: build up restart down destroy logs
+
 build:
 	docker volume create postgres_data
 	docker-compose up --build
@@ -14,3 +16,6 @@ down:
 
 destroy:
 	docker-compose down --rmi all --volumes
+
+logs:
+	docker-compose logs -f
