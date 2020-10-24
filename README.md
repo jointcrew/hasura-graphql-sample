@@ -1,5 +1,6 @@
 # 概要
 - HasuraでGraphqlを利用するためのサンプルリポジトリです
+- Hasuraコンソールにアクセスし、`GraphiQL`からGraphQLのクエリを試すことができます
 
 # 利用方法
 ## 環境構築
@@ -31,3 +32,9 @@ $ make destory
 
 # 利用データについて
 - [駅データ.jp](https://ekidata.jp/doc/) のデータを利用しています
+- ER図（駅データ.jpからcsvをダウンロードし、Postgresにほぼ突っ込んだだけです。）
+<img width="843" alt="スクリーンショット 2020-10-24 21 03 03" src="https://user-images.githubusercontent.com/29055497/97081317-947cfc80-163c-11eb-8e81-5a377b5a0182.png">
+
+
+# 参考
+- [Hasura Doc](https://hasura.io/docs/1.0/graphql/core/index.html)
